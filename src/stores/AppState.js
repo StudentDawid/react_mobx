@@ -16,6 +16,11 @@ class AppState {
   resetTimer() {
     this.timer = 0;
   }
+
+  addTime(value) {
+    this.timer += value;
+    console.log('add time', value, this.timer);
+  }
 }
 
 export default AppState;
