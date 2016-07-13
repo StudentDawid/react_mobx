@@ -9,8 +9,6 @@ class MainPage extends React.Component {
   }
 
   render() {
-    console.log('MainPage');
-    console.log('props', this.props.appState, this.props.appState.getTimer);
     return (
       <div>
         <h1>React Test</h1><br></br>

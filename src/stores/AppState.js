@@ -1,7 +1,7 @@
 import {observable, computed} from 'mobx';
 
 class AppState {
-  @observable timer = 1000;
+  @observable timer = 10;
 
   constructor() {
     setInterval(() => {
