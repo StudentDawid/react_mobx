@@ -1,12 +1,16 @@
-import {observable} from 'mobx';
+import {observable, computed} from 'mobx';
 
 class AppState {
-  @observable timer = 0;
+  @observable timer = 1000;
 
   constructor() {
     setInterval(() => {
       this.timer += 1;
     }, 1000);
+  }
+
+  @computed get getTimer() {
+    return this.timer;
   }
 
   resetTimer() {
