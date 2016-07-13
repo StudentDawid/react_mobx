@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {observer, inject} from 'mobx-react';
 
 @inject('appState') @observer
-class FirstPage extends React.Component {
+class FirstPage extends Component {
   static propTypes = {
     appState: React.PropTypes.any
   }

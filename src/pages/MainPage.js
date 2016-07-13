@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {observer, inject} from 'mobx-react';
 import {IndexLink, Link} from 'react-router';
 
 @inject('appState') @observer
-class MainPage extends React.Component {
+class MainPage extends Component {
 
   static propTypes = {
     appState: React.PropTypes.any,
@@ -11,12 +11,14 @@ class MainPage extends React.Component {
   }
 
   render() {
+    const {appState, children} = this.props;
+
     return (
       <div>
         <h1>React Test</h1><br></br>
         <IndexLink to="/"> firstpage </IndexLink> <Link to="secondpage"> secondpage </Link><br></br>
-        Counter - {this.props.appState.getTimer}
-          {this.props.children}
+        Counter - {appState.getTimer}
+        {children}
       </div>
     );
   }
