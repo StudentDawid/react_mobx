@@ -7,7 +7,7 @@ class FirstPage extends React.Component {
     appState: React.PropTypes.any
   }
 
-  toggleAdd() {
+  toggleAdd = () => {
     this.props.appState.addTime(5);
   }
 
@@ -15,7 +15,7 @@ class FirstPage extends React.Component {
     return (
       <div>
         first page
-        <button onClick={this.toggleAdd.bind(this)}>ADD 5</button>
+        <button onClick={this.toggleAdd}>ADD 5</button>
       </div>
     );
   }

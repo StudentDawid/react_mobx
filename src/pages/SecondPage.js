@@ -7,7 +7,7 @@ class SecondPage extends React.Component {
     appState: React.PropTypes.any
   }
 
-  toggleRemove() {
+  toggleRemove = () => {
     this.props.appState.addTime(-5);
   }
 
@@ -15,7 +15,7 @@ class SecondPage extends React.Component {
     return (
       <div>
         Second Page
-        <button onClick={this.toggleRemove.bind(this)}>REMOVE 5</button>
+        <button onClick={this.toggleRemove}>REMOVE 5</button>
       </div>
     );
   }
