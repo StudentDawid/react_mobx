@@ -1,4 +1,4 @@
-import {observable, computed} from 'mobx';
+import mobx, {observable, computed} from 'mobx';
 
 class AppState {
   @observable timer = 10;
@@ -7,6 +7,7 @@ class AppState {
     setInterval(() => {
       this.timer += 1;
     }, 1000);
+    mobx.autorun(() => console.log('Timer is - ' + this.timer));
   }
 
   @computed get getTimer() {
